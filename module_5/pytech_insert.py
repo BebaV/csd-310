@@ -1,4 +1,4 @@
-MongoDB: insert_one ()
+insert_one()
 frank = {
     "student_id" : "1007",
     "first_name" : " frank ",
