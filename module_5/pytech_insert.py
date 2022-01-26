@@ -3,7 +3,7 @@ from pymongo.mongo_client import MongoClient
 url = "mongodb+srv://admin:admin@cluster0.vy4xh.mongodb.net/pytech?retryWrites=true&w=majority0"
 client = MongoClient(url)
 db = client.pytech
-mycol = db.students
+students = db.students
 
 frank = {
     "student_id" : "1007",
@@ -21,3 +21,8 @@ judy = {
 frank_student_id = students.insert_one(frank).inserted_id
 gene_student_id = students.insert_one(gene).inserted_id
 judy_student_id = students.insert_one(judy).inserted_id
+
+print("-- insert statements --")
+print("inserted student record frank sinatra into the students collection with student id ", frank_student_id)
+print("inserted student record gene kelly into the students collection with student id ", gene_student_id)
+print("inserted student record judy garland into the students collection with student id ", judy_student_id)
