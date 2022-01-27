@@ -9,8 +9,8 @@ students = db.students
 students.find()
 docs = db.students_name.find({})
 
+print("-- DISPLAYING STUDENTS DOCUMENTS FROM find() QUERY --")
 for doc in docs:
-    print("-- DISPLAYING STUDENTS DOCUMENTS FROM find() QUERY --")
     print(docs)
 
 students.find_one()
