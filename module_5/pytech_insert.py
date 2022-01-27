@@ -20,4 +20,5 @@ judy_student_id = students.insert_one(judy).inserted_id
 print("-- insert statements --")
 print("inserted student record frank sinatra into the students collection with student id ", frank_student_id)
 print("inserted student record gene kelly into the students collection with student id ", gene_student_id)
-print("inserted student record judy garland into the students collection with student id ", judy_student_id)
+print("inserted student record judy garland into the students collection with student id ", judy_student_id,)
+print("")
