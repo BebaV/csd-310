@@ -6,9 +6,19 @@ client = MongoClient(url)
 db = client.pytech
 students = db.students
 
-db.students_name.find()
+print("-- DISPLAYING STUDENTS DOCUMENTS FROM find() QUERY --")
+for doc in students.find():
+    print("Student ID:",doc["student_id"])
+    print("First Name:",doc["first_name"])
+    print("Last Name:",doc["last_name"],"\n")
 
-db.students_name.update({“student_id”: 1007}, {“$set”: {“last_name”: ““Gorshin”}})
+#students.update_one()
+result = db.students.update_one({"student_id": "1007"}, {"$set":{"last_name":"Krafka"}})
 
-result = db.collection.find({Module_6/pytech_update.py})
-print(result)
+students.find_one()
+doc = students.find_one({"student_id": "1007"})
+
+print("-- DISPLAYING STUDENT DOCUMENT 1007 --")
+print("Student ID:",doc["student_id"])
+print("First Name:",doc["first_name"])
+print("Last Name:",doc["last_name"],"\n")
