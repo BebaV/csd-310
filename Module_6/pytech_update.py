@@ -13,7 +13,7 @@ for doc in students.find():
     print("Last Name:",doc["last_name"],"\n")
 
 #students.update_one()
-result = db.students.update_one({"student_id": "1007"}, {"$set":{"last_name":"Krafka"}})
+result = db.students.update_one({"student_id": "1007"}, {"$set":{"last_name":"Hotsauce"}})
 
 students.find_one()
 doc = students.find_one({"student_id": "1007"})
