@@ -11,7 +11,7 @@ db.collection_name.find()
 students.insert()
 joan = {
     "student_id" : "1010",
-    "first_name" : " joan ",
+    "first_name" : " joan",
     "last_name" : "crawford"
 }
 db.students.find({"student_id" : "1010"})
