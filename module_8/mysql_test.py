@@ -1,11 +1,3 @@
-""" 
-    Title: pysports_queries.py
-    Author: Professor Krasso
-    Date: 15 July 2020
-    Description: Test program for executing queries against the pysports database. 
-"""
-
-""" import statements """
 import mysql.connector
 from mysql.connector import errorcode
 
