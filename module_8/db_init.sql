@@ -1,11 +1,4 @@
-/*
-    Title: db_init.sql
-    Author: Professor Krasso
-    Date: 15 July 2020
-    Description: pysports database initialization script.
-*/
-
--- drop test user if exists 
+/-- drop test user if exists 
 DROP USER IF EXISTS 'pysports_user'@'localhost';
 
 
