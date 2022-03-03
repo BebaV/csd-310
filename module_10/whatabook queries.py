@@ -1,3 +1,4 @@
+import sys
 import mysql.connector
 from mysql.connector import errorcode
 
@@ -21,7 +22,7 @@ except:
         print("\n  That is an invalid choice...")
         sys.exit(0)
 
-users_input = show_menu()
+user_input = show_menu()
     
 while user_input != 4:
         if user_input == 1:
@@ -62,7 +63,7 @@ def show_wishlist(_cursor, _user_id):
     wishlist = _cursor.fetchall()
 
 print(" Books currently in your wishlist : ")
-for book in wishlist:
+for book in wishlist
     print(" book title: {}\n book author: {}\n book details: {}\n".format(book[0], book[1], book[2]))
 
 
@@ -73,7 +74,7 @@ def show_locations(_cursor):
     location = _cursor.fetchall()
 
     print("Store location")
-    print("location: {}\n" .format(location[0] location[1], location[2]))
+    print("location: {}\n " .format(location[0] location[1], location[2]))
 
 
 # what does whatabook have in stock
@@ -87,11 +88,13 @@ def show_books(_cursor):
 
 # view the list of books not in the user's wishlist
 def show_books_to_add(_cursor, _user_id):   
-    cursor.execute("SELECT book_id, book_name, author, details")
-    FROM book 
-    WHERE book_id NOT IN (SELECT book_id FROM wishlist WHERE user_id = {}).format(_user_id))
+    query = ("SELECT book_id, book_name, author, details "
+            "FROM book "
+            "WHERE book_id NOT IN (SELECT book_id FROM wishlist WHERE user_id = {})".format(_user_id))
 
-add_to_WL = _cursor.fetchall()
+    print(query)
+
+    _cursor.execute(query)
 
     print("Books available for addition to your wishlist:")
     print("\n book name: {}\n book title: {}\n book author: {}\n  book details: {}\n".format(book[0], book[1], book[2]))
@@ -99,7 +102,7 @@ add_to_WL = _cursor.fetchall()
 
 # add a book to the user's wishlist
 def add_book_to_wishlist(_cursor, _user_id, _book_id):
-    cursor.execute("INSERT INTO wishlist(user_id, book_id)") VALUES({}, {}).format(_user_id, _book_id))
+    cursor.execute("INSERT INTO wishlist(user_id, book_id)) VALUES({}, {})".format(_user_id, _book_id))
 
 # connect to whatabook database 
 try:
